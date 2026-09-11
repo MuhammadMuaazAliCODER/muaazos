@@ -1,0 +1,21 @@
+# Rust build artifacts
+/target
+**/target/
+
+# Cargo registry
+.cargo/
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated / temp files
+*.log
+/tmp/

@@ -2,5 +2,8 @@
 name = "muaaz-system"
 version = "0.1.0"
 edition = "2024"
+description = "System-level integration and services for Muaaz OS"
+license = "MIT"
 
 [dependencies]
+muaaz-core = { path = "../muaaz-core" }

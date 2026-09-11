@@ -2,5 +2,9 @@
 name = "muaaz-core"
 version = "0.1.0"
 edition = "2024"
+description = "Shared fundamental types and utilities for Muaaz OS"
+license = "MIT"
 
 [dependencies]
+
+[dev-dependencies]

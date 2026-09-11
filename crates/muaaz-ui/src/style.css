@@ -1,0 +1,313 @@
+/* ============================================================
+   Muaaz OS — central desktop stylesheet
+   ------------------------------------------------------------
+   Colors are defined as @muaaz_* variables generated from
+   crate::theme. See crates/muaaz-ui/src/style.rs.
+   ============================================================ */
+
+window.muaaz-window {
+    background-color: @muaaz_bg_base;
+    color: @muaaz_text_primary;
+}
+
+.muaaz-root {
+    background-color: @muaaz_bg_base;
+}
+
+/* ---------- Typography ---------- */
+
+.muaaz-h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: @muaaz_text_primary;
+}
+
+.muaaz-h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: @muaaz_text_primary;
+}
+
+.muaaz-body {
+    font-size: 13px;
+    color: @muaaz_text_secondary;
+}
+
+.muaaz-mono {
+    font-family: "JetBrains Mono", "Fira Code", "Cascadia Mono", monospace;
+}
+
+/* ---------- Top system panel ---------- */
+
+.muaaz-panel {
+    background-color: alpha(@muaaz_bg_raised, 0.9);
+    border-bottom: 1px solid @muaaz_border_subtle;
+    padding: 0 10px;
+    min-height: 46px;
+}
+
+.muaaz-panel-button {
+    min-width: 36px;
+    min-height: 30px;
+    border-radius: 10px;
+    padding: 0 10px;
+    color: @muaaz_text_secondary;
+    background-color: transparent;
+    border: none;
+    transition: background-color 120ms ease, color 120ms ease;
+}
+
+.muaaz-panel-button:hover {
+    background-color: @muaaz_bg_highlight;
+    color: @muaaz_text_primary;
+}
+
+.muaaz-panel-button:active {
+    background-color: @muaaz_bg_surface_active;
+}
+
+.muaaz-panel-image {
+    -gtk-icon-size: 16px;
+}
+
+.muaaz-panel-separator {
+    color: @muaaz_border;
+}
+
+.muaaz-panel-label {
+    color: @muaaz_text_secondary;
+    font-size: 12px;
+}
+
+/* ---------- Clock & status ---------- */
+
+.muaaz-clock {
+    color: @muaaz_text_primary;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.muaaz-status-item {
+    color: @muaaz_text_secondary;
+    font-size: 12px;
+}
+
+.muaaz-status-cpu {
+    color: @muaaz_status_success;
+}
+
+.muaaz-status-mem {
+    color: @muaaz_accent;
+}
+
+.muaaz-status-bat {
+    color: @muaaz_status_warning;
+}
+
+/* ---------- Brand ---------- */
+
+.muaaz-brand-mark {
+    color: @muaaz_accent;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.muaaz-brand-tagline {
+    color: @muaaz_text_muted;
+    font-size: 12px;
+}
+
+/* ---------- Welcome / hero ---------- */
+
+.muaaz-welcome-title {
+    color: @muaaz_text_primary;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.muaaz-welcome-subtitle {
+    color: @muaaz_text_secondary;
+    font-size: 15px;
+}
+
+.muaaz-welcome-hint {
+    color: @muaaz_text_muted;
+    font-size: 12px;
+}
+
+.muaaz-welcome-chip {
+    border-radius: 999px;
+    background-color: @muaaz_accent_soft;
+    color: @muaaz_accent;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* ---------- Cards ---------- */
+
+.muaaz-card {
+    background-color: @muaaz_bg_surface;
+    border: 1px solid @muaaz_border;
+    border-radius: 14px;
+}
+
+.muaaz-card-title {
+    color: @muaaz_text_primary;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.muaaz-card-body {
+    color: @muaaz_text_secondary;
+    font-size: 12.5px;
+}
+
+/* ---------- Application shortcuts ---------- */
+
+.muaaz-shortcut {
+    background-color: @muaaz_bg_surface;
+    border: 1px solid @muaaz_border;
+    border-radius: 14px;
+    min-width: 150px;
+    padding: 14px;
+    transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.muaaz-shortcut:hover {
+    border-color: @muaaz_accent;
+    background-color: @muaaz_bg_surface_hover;
+}
+
+.muaaz-shortcut:active {
+    background-color: @muaaz_bg_surface_active;
+}
+
+.muaaz-shortcut-title {
+    color: @muaaz_text_primary;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.muaaz-shortcut-desc {
+    color: @muaaz_text_secondary;
+    font-size: 12px;
+}
+
+.muaaz-shortcut-status {
+    color: @muaaz_text_muted;
+    font-size: 11px;
+}
+
+.muaaz-shortcut-icon {
+    color: @muaaz_accent;
+}
+
+/* ---------- Launcher ---------- */
+
+.muaaz-launcher {
+    background-color: alpha(@muaaz_bg_base, 0.9);
+    border-bottom: 1px solid @muaaz_border_subtle;
+    padding: 12px 18px;
+}
+
+.muaaz-launcher-search {
+    background-color: @muaaz_bg_raised;
+    border: 1px solid @muaaz_border;
+    border-radius: 10px;
+    color: @muaaz_text_primary;
+}
+
+.muaaz-launcher-search:focus {
+    border-color: @muaaz_accent;
+}
+
+.muaaz-launcher-empty {
+    color: @muaaz_text_muted;
+    font-size: 13px;
+}
+
+.muaaz-launcher-row {
+    border-radius: 10px;
+    background-color: transparent;
+    color: @muaaz_text_primary;
+    padding: 8px 12px;
+    transition: background-color 120ms ease;
+}
+
+.muaaz-launcher-row:hover {
+    background-color: @muaaz_bg_surface_hover;
+}
+
+.muaaz-launcher-row-title {
+    color: @muaaz_text_primary;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.muaaz-launcher-row-desc {
+    color: @muaaz_text_secondary;
+    font-size: 12px;
+}
+
+/* ---------- Buttons ---------- */
+
+.muaaz-accent-button {
+    background-color: @muaaz_accent;
+    color: @muaaz_bg_base;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: background-color 120ms ease;
+}
+
+.muaaz-accent-button:hover {
+    background-color: @muaaz_accent_hover;
+}
+
+.muaaz-accent-button:active {
+    background-color: @muaaz_accent_active;
+}
+
+.muaaz-accent-button:focus-visible,
+.muaaz-outline-button:focus-visible,
+.muaaz-panel-button:focus-visible,
+.muaaz-launcher-row:focus-visible,
+.muaaz-shortcut:focus-visible {
+    box-shadow: inset 0 0 0 2px alpha(@muaaz_focus, 0.85);
+}
+
+.muaaz-outline-button {
+    background-color: transparent;
+    color: @muaaz_text_secondary;
+    border: 1px solid @muaaz_border;
+    border-radius: 10px;
+    padding: 8px 16px;
+    transition: color 120ms ease, border-color 120ms ease;
+}
+
+.muaaz-outline-button:hover {
+    color: @muaaz_text_primary;
+    border-color: @muaaz_accent;
+}
+
+.muaaz-outline-button:active {
+    background-color: @muaaz_bg_surface;
+}
+
+/* ---------- Section ---------- */
+
+.muaaz-section-kicker {
+    color: @muaaz_accent;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* ---------- Scrollbars ---------- */
+
+scrollbar trough {
+    background-color: transparent;
+}

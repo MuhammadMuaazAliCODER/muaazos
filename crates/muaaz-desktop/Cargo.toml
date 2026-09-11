@@ -2,5 +2,12 @@
 name = "muaaz-desktop"
 version = "0.1.0"
 edition = "2024"
+description = "The Muaaz OS desktop shell"
+license = "MIT"
 
 [dependencies]
+muaaz-core = { path = "../muaaz-core" }
+muaaz-system = { path = "../muaaz-system" }
+muaaz-ui = { path = "../muaaz-ui" }
+gtk = { package = "gtk4", version = "0.11", features = ["v4_16"] }
+libadwaita = { version = "0.9", features = ["gtk_v4_22", "v1_9"] }

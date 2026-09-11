@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/muaaz-core",
+    "crates/muaaz-system",
+    "crates/muaaz-ui",
+    "crates/muaaz-desktop",
+    "crates/muaaz-shell"
+]
